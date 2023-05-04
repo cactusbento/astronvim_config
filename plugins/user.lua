@@ -9,6 +9,7 @@ return {
       require("lsp_signature").setup({
           hint_enable = true,
           hint_prefix = "!>",
+		  toggle_key = '<M-x>',
       })
     end,
   },
