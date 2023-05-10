@@ -49,7 +49,7 @@ return {
             	run_on_every_keystroke = true,
             	snippet_placeholder = "..",
             	ignored_file_types = {},
-            	show_prediction_strength = false,
+            	show_prediction_strength = true,
 			}
 		end,
 	}
