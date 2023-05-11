@@ -44,7 +44,7 @@ return {
 			local tabnine = require "cmp_tabnine.config"
 			tabnine:setup {
 				max_lines = 1000,
-            	max_num_results = 20,
+            	max_num_results = 5,
             	sort = true,
             	run_on_every_keystroke = true,
             	snippet_placeholder = "..",
@@ -52,5 +52,16 @@ return {
             	show_prediction_strength = true,
 			}
 		end,
-	}
+	},
+	{
+		"jcdickinson/codeium.nvim",
+		lazy = false,
+		dependencies = {
+		    "nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup()
+		end
+	},
 }

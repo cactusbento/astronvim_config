@@ -79,16 +79,18 @@ return {
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"tzachar/cmp-tabnine",
+			"jcdickinson/codeium.nvim",
 		},
 		opts = function(_, opts)
 			local cmp = require "cmp"
 
 			opts.sources = cmp.config.sources {
-				{ name = "nvim_lsp", priority = 1000 },
+				{ name = "codeium", priority = 1000 },
+				{ name = "cmp_tabnine", priority = 950 },
+				{ name = "nvim_lsp", priority = 900 },
 				{ name = "luasnip", priority = 750 },
 				{ name = "buffer", priority = 500 },
 				{ name = "path", priority = 250 },
-				{ name = "cmp_tabnine", priority = 700 },
 			}
 
 			return opts
