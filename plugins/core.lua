@@ -83,6 +83,10 @@ return {
 				{ name = "codeium", priority = 0 },
 			}
 
+			opts.experimental = {
+				ghost_text = true
+			}
+
 			return opts
 		end,
 	},

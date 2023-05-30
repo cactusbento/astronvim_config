@@ -64,4 +64,8 @@ return {
 			require("codeium").setup()
 		end
 	},
+	-- {
+	-- 	"Exafunction/codeium.vim",
+	-- 	lazy = false,
+	-- }
 }
