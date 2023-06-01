@@ -33,10 +33,10 @@ return {
 			format_on_save = {
 				enabled = true, -- enable or disable format on save globally
 				allow_filetypes = { -- enable format on save for specified filetypes only
-			"zig", "python", "typescript", "json",
+					"zig", "python", "typescript", "json",
 				},
 				ignore_filetypes = { -- disable format on save for specified filetypes
-			"c", "go",
+					"c", "go",
 				},
 			},
 			disabled = { -- disable formatting capabilities for the listed language servers
@@ -51,10 +51,17 @@ return {
 		-- enable servers that you already have installed without mason
 		servers = {
 			-- "pyright"
-			"jedi_language_server"
+			"jedi_language_server",
+			"zls"
 		},
 		config = {
-		}
+			dockerls = function()
+				return {
+					filetypes = {"dockerfile", "dontainerfile"},
+					root_dir = require("lspconfig.util").root_pattern("Dockerfile", "Containerfile")
+				}
+			end
+		},
 	},
 
 	-- Configure require("lazy").setup() options

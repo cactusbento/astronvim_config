@@ -8,8 +8,9 @@ return {
 			ensure_installed = {
 				"lua_ls", "bashls",
 				"gopls", "ansiblels",
-				"zls", "clangd",
+				"clangd", "dockerls",
 				"csharp_ls", "tsserver"
+				-- "zls",	-- Use latest version in $PATH
 			},
 		},
 	},
