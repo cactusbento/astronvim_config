@@ -9,7 +9,9 @@ return {
 				"lua_ls", "bashls",
 				"gopls", "ansiblels",
 				"clangd", "dockerls",
-				"csharp_ls", "tsserver"
+				"csharp_ls", "tsserver",
+				"svelte",
+				"marksman", "phpactor",
 				-- "zls",	-- Use latest version in $PATH
 			},
 		},

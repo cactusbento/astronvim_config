@@ -7,9 +7,10 @@ return {
 		event = "BufRead",
 		config = function()
 			require("lsp_signature").setup({
+					bind = true,
 					hint_enable = true,
 					hint_prefix = "!>",
-			toggle_key = '<M-x>',
+			toggle_key = '<C-x>',
 			})
 		end,
 	},
@@ -55,6 +56,7 @@ return {
 	},
 	{
 		"jcdickinson/codeium.nvim",
+		enabled = false,
 		lazy = false,
 		dependencies = {
 		    "nvim-lua/plenary.nvim",
