@@ -29,6 +29,7 @@ return {
 			require("gopher").setup({
 				commands = {
 					go = "go",
+					dlv = "",
 					gomodifytags = "gomodifytags",
 					gotests = "~/go/bin/gotests", -- also you can set custom command path
 					impl = "impl",
@@ -40,10 +41,11 @@ return {
 	{
 		"tzachar/cmp-tabnine",
 		build = './install.sh',
+		lazy = false,
 		dependencies = 'hrsh7th/nvim-cmp',
 		config = function()
 			local tabnine = require "cmp_tabnine.config"
-			tabnine:setup {
+			tabnine:setup({
 				max_lines = 1000,
             	max_num_results = 5,
             	sort = true,
@@ -51,7 +53,7 @@ return {
             	snippet_placeholder = "..",
             	ignored_file_types = {},
             	show_prediction_strength = true,
-			}
+			})
 		end,
 	},
 	{
