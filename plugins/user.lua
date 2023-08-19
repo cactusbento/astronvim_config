@@ -56,7 +56,7 @@ return {
 	},
 	{
 		"jcdickinson/codeium.nvim",
-		enabled = false,
+		enabled = true,
 		lazy = false,
 		dependencies = {
 		    "nvim-lua/plenary.nvim",
