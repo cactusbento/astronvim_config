@@ -11,7 +11,7 @@ return {
 				"clangd", "dockerls",
 				"csharp_ls", "tsserver",
 				"svelte",
-				"marksman", "phpactor",
+				"marksman",
 				-- "zls",	-- Use latest version in $PATH
 			},
 		},
