@@ -60,7 +60,21 @@ return {
 					filetypes = {"dockerfile", "dontainerfile"},
 					root_dir = require("lspconfig.util").root_pattern("Dockerfile", "Containerfile")
 				}
-			end
+			end,
+			texlab = function ()
+                return {
+                	settings = {
+                		texlab = {
+                			build = {
+                				executable = "tectonic",
+                				args = { "-X", "compile", "%f", "--synctex", "--keep-logs", "--keep-intermediates" },
+                				forwardSearchAfter = false,
+                				onSave = true,
+                			},
+                		},
+                	},
+                }
+			end,
 		},
 	},
 
