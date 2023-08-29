@@ -6,17 +6,15 @@ return {
 		-- overrides `require("mason-lspconfig").setup(...)`
 		opts = {
 			ensure_installed = {
-				"lua_ls",
-				"bashls",
-				"gopls",
-				"ansiblels",
-				"clangd",
-				"dockerls",
-				"csharp_ls",
-				"tsserver",
-				"svelte",
-				"marksman",
-				"texlab",
+				-- "lua_ls",
+				-- "bashls",
+				-- "gopls",
+				-- "ansiblels",
+				-- "clangd",
+				-- "dockerls",
+				-- "csharp_ls",
+				-- "marksman",
+				-- "texlab",
 				-- "ltex",
 				-- "zls",	-- Use latest version in $PATH
 			},
