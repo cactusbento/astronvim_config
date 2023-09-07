@@ -84,6 +84,10 @@ return {
 				{ name = "cmp_tabnine", priority = 100 },
 				{ name = "codeium", priority = 50 },
 			}
+			opts.window = {
+      		    completion = cmp.config.window.bordered(),
+      		    documentation = cmp.config.window.bordered(),
+    		}
 
 			opts.experimental = {
 				ghost_text = true
