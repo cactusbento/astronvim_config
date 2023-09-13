@@ -10,13 +10,14 @@ return {
 				"bashls",
 
 				"clangd",
-
 				"dockerls",
 
 				"marksman",
 				"texlab",
 				"ltex",
 				"zk",
+
+				"gdscript",
 				-- "zls",	-- Use latest version in $PATH
 			},
 		},

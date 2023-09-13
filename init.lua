@@ -55,6 +55,32 @@ return {
 			"zls"
 		},
 		config = {
+		  --   jedi_language_server = function()
+				-- return {
+				-- 	settings = {
+				-- 		workspace = {
+				-- 			environmentPath = "/usr/bin/python"
+				-- 		}
+				-- 	}
+				-- }
+		  --   end,
+			pylsp = function()
+                return {
+                	settings = {
+                		pylsp = {
+                			plugins = {
+                				jedi = {
+                					environment = "/usr/bin/python"
+                				},
+                				pycodestyle = {
+                					ignore = {'W391'},
+                					maxLineLength = 100,
+                				},
+                			}
+                		}
+                	}
+                }
+			end,
 			dockerls = function()
 				return {
 					filetypes = {"dockerfile", "dontainerfile"},
