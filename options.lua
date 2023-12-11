@@ -11,7 +11,7 @@ return {
     autoindent = true,
     smartindent = true,
 
-    expandtab = false,
+    expandtab = true,
     tabstop = 4,
     shiftwidth = 4,
     softtabstop = 4,

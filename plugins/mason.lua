@@ -15,9 +15,8 @@ return {
 				"marksman",
 				"texlab",
 				"ltex",
-				"zk",
+				-- "zk", -- Fails to install properly
 
-				"gdscript",
 				-- "zls",	-- Use latest version in $PATH
 			},
 		},

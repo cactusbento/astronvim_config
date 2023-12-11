@@ -52,35 +52,34 @@ return {
 		servers = {
 			-- "pyright"
 			"jedi_language_server",
-			"zls"
+			"jdtls",
+			"sqlls",
+			"zls",
+			"zk",
 		},
 		config = {
-		  --   jedi_language_server = function()
-				-- return {
-				-- 	settings = {
-				-- 		workspace = {
-				-- 			environmentPath = "/usr/bin/python"
-				-- 		}
-				-- 	}
-				-- }
-		  --   end,
-			pylsp = function()
+		    r_language_server = function()
                 return {
-                	settings = {
-                		pylsp = {
-                			plugins = {
-                				jedi = {
-                					environment = "/usr/bin/python"
-                				},
-                				pycodestyle = {
-                					ignore = {'W391'},
-                					maxLineLength = 100,
-                				},
-                			}
-                		}
-                	}
+                    settings = {
+                        languageserver = {
+                            lint_cache = true,
+                            server_capabilities = {
+
+                            },
+
+                        },
+                    },
                 }
-			end,
+		    end,
+		    jedi_language_server = function()
+				return {
+					settings = {
+						workspace = {
+							environmentPath = "/usr/bin/python"
+						}
+					}
+				}
+		    end,
 			dockerls = function()
 				return {
 					filetypes = {"dockerfile", "dontainerfile"},
