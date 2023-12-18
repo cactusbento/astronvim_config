@@ -72,4 +72,13 @@ return {
 	-- 	"Exafunction/codeium.vim",
 	-- 	lazy = false,
 	-- }
+	{
+	    "sourcegraph/sg.nvim",
+		lazy = false,
+	    dependencies = { "nvim-lua/plenary.nvim" },
+	    config = function () 
+            local sg = require "sg"
+            sg:setup({})
+	    end,
+	}
 }
