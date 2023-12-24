@@ -67,7 +67,7 @@ return {
 	-- },
 	{ -- override nvim-cmp plugin
 		"hrsh7th/nvim-cmp",
-		commit = "6c84bc75c64f778e9f1dcb798ed41c7fcb93b639", -- lock update (break codeium)
+		-- commit = "6c84bc75c64f778e9f1dcb798ed41c7fcb93b639", -- lock update (break codeium)
 		dependencies = {
 			"tzachar/cmp-tabnine",
 			"jcdickinson/codeium.nvim",
@@ -75,15 +75,17 @@ return {
 		opts = function(_, opts)
 			local cmp = require "cmp"
 
+			opts.preselect = cmp.PreselectMode.None
+
 			opts.sources = cmp.config.sources {
 				{ name = "nvim_lsp", priority = 1000 },
 				{ name = "cmp-dap", priority = 900 },
-				{ name = "luasnip", priority = 700 },
-				{ name = "buffer", priority = 500 },
-				{ name = "path", priority = 250 },
-				{ name = "cmp_tabnine", priority = 100 },
-				{ name = "codeium", priority = 50 },
-				{ name = "cody", priority = 25 },
+				{ name = "luasnip", priority = 800 },
+				{ name = "buffer", priority = 700 },
+				{ name = "path", priority = 600 },
+				{ name = "cmp_tabnine", priority = 500 },
+				{ name = "codeium", priority = 400 },
+				{ name = "cody", priority = 300 },
 			}
 			opts.window = {
       		    completion = cmp.config.window.bordered(),

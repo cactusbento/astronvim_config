@@ -15,6 +15,8 @@ return {
 				"marksman",
 				"texlab",
 				"ltex",
+
+				-- "fsautocomplete",
 				-- "zk", -- Fails to install properly
 
 				-- "zls",	-- Use latest version in $PATH

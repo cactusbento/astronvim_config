@@ -76,9 +76,13 @@ return {
 	    "sourcegraph/sg.nvim",
 		lazy = false,
 	    dependencies = { "nvim-lua/plenary.nvim" },
-	    config = function () 
+	    config = function ()
             local sg = require "sg"
-            sg:setup({})
+            sg:setup()
 	    end,
-	}
+	},
+	{
+		"ionide/Ionide-vim",
+		lazy = false,
+	},
 }

@@ -56,6 +56,7 @@ return {
 			"sqlls",
 			"zls",
 			"zk",
+			-- "fsautocomplete",
 		},
 		config = {
 		    r_language_server = function()
