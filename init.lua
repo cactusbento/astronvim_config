@@ -56,9 +56,30 @@ return {
 			"sqlls",
 			"zls",
 			"zk",
-			-- "fsautocomplete",
+			"fsautocomplete",
 		},
 		config = {
+		    fsautocomplete = function ()
+                return {
+                    root_dir = function (fName, _)
+                        local util = require("lspconfig.util")
+                        local root
+                        root = util.find_git_ancestor(fName)
+                        root = root or util.root_pattern("*.sln")(fName)
+                        root = root or util.root_pattern("*.fsproj")(fName)
+                        root = root or util.root_pattern("*.fsx")(fName)
+                        -- root = root or util.root_pattern("*.fsi")(fName)
+                        return root
+                    end,
+                    filetypes = { 'fsharp' },
+                    init_options = {
+                        AutomaticWorkspaceInit = true,
+                    },
+                    settings = {
+                        ExternalAutocomplete = true,
+                    }
+                }
+		    end,
 		    r_language_server = function()
                 return {
                     settings = {

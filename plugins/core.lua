@@ -85,7 +85,7 @@ return {
 				{ name = "path", priority = 600 },
 				{ name = "cmp_tabnine", priority = 500 },
 				{ name = "codeium", priority = 400 },
-				{ name = "cody", priority = 300 },
+				-- { name = "cody", priority = 300 },
 			}
 			opts.window = {
       		    completion = cmp.config.window.bordered(),
