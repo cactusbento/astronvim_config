@@ -85,4 +85,11 @@ return {
 		"ionide/Ionide-vim",
 		lazy = false,
 	},
+	{
+	    "LhKipp/nvim-nu",
+	    lazy = false,
+	    config = function ()
+	        require('nu').setup()
+	    end,
+	},
 }

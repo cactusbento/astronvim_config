@@ -64,9 +64,9 @@ return {
                     root_dir = function (fName, _)
                         local util = require("lspconfig.util")
                         local root
-                        root = util.find_git_ancestor(fName)
-                        root = root or util.root_pattern("*.sln")(fName)
-                        root = root or util.root_pattern("*.fsproj")(fName)
+                        -- root = util.find_git_ancestor(fName)
+                        -- root = root or util.root_pattern("*.sln")(fName)
+                        -- root = root or util.root_pattern("*.fsproj")(fName)
                         root = root or util.root_pattern("*.fsx")(fName)
                         -- root = root or util.root_pattern("*.fsi")(fName)
                         return root
@@ -76,7 +76,7 @@ return {
                         AutomaticWorkspaceInit = true,
                     },
                     settings = {
-                        ExternalAutocomplete = true,
+                        ExternalAutocomplete = false,
                     }
                 }
 		    end,
